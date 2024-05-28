@@ -1,0 +1,81 @@
+<!-- front/src/app/word-search/word-search.component.html -->
+
+<div class="search-container" [ngStyle]="{'background-image': 'url(' + bgImage + ')'}">
+  <h2>Japanese Word Search</h2>
+  <div class="search-box">
+    <input type="text" [(ngModel)]="searchTerm" placeholder="Enter a word" (keyup.enter)="search()">
+    <button (click)="search()">Search</button>
+  </div>
+
+  <div *ngIf="isLoading" class="loading-message">Searching...</div>
+  <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+
+  <div class="bg-select">
+    <label for="bg-input">Select background image:</label>
+    <input type="file" id="bg-input" (change)="onBgImageSelected($event)">
+  </div>
+  <div *ngIf="searchResults.length > 0" class="results-container">
+    <div *ngFor="let result of pagedResults; let i = index"
+       class="result-item"
+       [ngStyle]="{'background-color': bgColors[i % bgColors.length]}">
+      <div class="kanji">{{result.kanji}}</div>
+      <div class="kana">{{result.kana}}</div>
+      <div class="tags">
+        <span *ngFor="let tag of result.tags.split(' ')" class="tag"
+              (mouseover)="getTagExplanation(tag, $event)"
+              (mouseout)="tagExplanation = ''">
+          {{tag}}
+        </span>
+      </div>
+      <div class="meanings">
+        <div *ngFor="let meaning of result.meanings">- {{meaning}}</div>
+      </div>
+      <div class="meta">
+        <div>Frequency: {{result.frequency}}</div>
+        <div>Sequence: {{result.sequence}}</div>
+      </div>
+      <div *ngIf="result.additional" class="additionals">
+        <span *ngFor="let additional of result.additional.split(' ')" class="additional"
+            (mouseover)="getTagExplanation(additional, $event)"
+            (mouseout)="tagExplanation = ''">
+          {{additional}}
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <div class="pagination" *ngIf="totalPages > 1">
+    <button class="pagination-button first-page" (click)="goToPage(1)" [disabled]="currentPage === 1">
+      <<
+    </button>
+    <button class="pagination-button prev-page" (click)="goToPage(currentPage - 1)" [disabled]="currentPage === 1">
+      <
+    </button>
+
+    <button class="pagination-button"
+      *ngFor="let page of visiblePages"
+      (click)="goToPage(page)"
+      [class.active]="page === currentPage">
+      {{page !== -1 ? page : '...'}}
+    </button>
+
+    <button class="pagination-button next-page" (click)="goToPage(currentPage + 1)" [disabled]="currentPage === totalPages">
+      >
+    </button>
+    <button class="pagination-button last-page" (click)="goToPage(totalPages)" [disabled]="currentPage === totalPages">
+      >>
+    </button>
+
+    <div class="pagination-goto">
+      <input class="pagination-input" type="number" [(ngModel)]="gotoPage" min="1" [max]="totalPages">
+      <button class="pagination-button goto-button" (click)="goToPage(gotoPage)">Go</button>
+    </div>
+  </div>
+
+</div>
+
+<app-tag-explanation
+  [explanation]="tagExplanation"
+  [x]="explanationX"
+  [y]="explanationY">
+</app-tag-explanation>

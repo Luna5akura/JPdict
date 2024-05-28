@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "cors": ["node_modules/cors"]
+    },
+    "target": "ES6",
+    "module": "commonjs",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "outDir": "./dist",
+    "typeRoots": ["./node_modules/@types", "./scripts"]
+  },
+  "include": [
+    "src",
+    "scripts"
+  ],
+
+  "files": ["scripts/global.d.ts"]
+}
