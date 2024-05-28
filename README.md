@@ -1,4 +1,4 @@
-# Japanese Word Search App
+# EN-JP Dict
 
 This is a Japanese word search application that allows users to search for Japanese words and view their meanings, readings, tags, frequency, and other information. The app consists of a backend API built with Express.js and TypeScript, and a frontend user interface built with Angular.
 
