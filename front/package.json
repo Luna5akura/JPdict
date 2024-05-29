@@ -2,7 +2,6 @@
   "name": "jp-dict-front",
   "version": "1.0.3",
   "scripts": {
-    "version": "npm-version",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
