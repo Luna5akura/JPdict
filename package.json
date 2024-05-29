@@ -1,6 +1,6 @@
 {
   "name": "jp-dict",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "workspaces": [
     ".",
     "front",
@@ -16,6 +16,5 @@
     "lerna": "^8.1.3",
     "npm-version": "^1.1.0",
     "wait-on": "^7.0.1"
-  },
-  "dependencies": {}
+  }
 }
