@@ -1,3 +1,9 @@
+# ignore library root
+
 back/node_modules
 front/node_modules
 /node_modules/
+
+# ignore logs
+
+lerna-debug.log
