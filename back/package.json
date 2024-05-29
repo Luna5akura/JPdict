@@ -1,6 +1,6 @@
 {
-  "name": "jpdict",
-  "version": "1.0.0",
+  "name": "jp-dict-back",
+  "version": "1.0.1",
   "main": "index.js",
   "scripts": {
     "start": "nodemon src/index.ts",
@@ -22,6 +22,7 @@
   },
   "devDependencies": {
     "@types/cors": "^2.8.17",
-    "nodemon": "^3.1.1"
+    "nodemon": "^3.1.1",
+    "wait-on": "^7.2.0"
   }
 }

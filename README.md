@@ -29,13 +29,14 @@ The frontend also includes features such as:
 - Tag explanations on hover
 - Color-coded result items
 
-## Setup and Usage
+## Setup and Usage 
 
 1. Clone the repository.
-2. Install the dependencies for both the backend and frontend using `npm install`.
-3. Start the backend server by running `npm start` in the `back` directory.
-4. Start the frontend development server by running `ng serve` in the `front` directory.
-5. Access the application in a web browser at `http://localhost:4200`.
+2. Install dependencies: `npm install`
+3. Start the app: 
+   - Option 1: `npm start` (starts both backend and frontend)
+   - Option 2: Run the `start.sh` script (starts app and opens browser)
+4. The app will be available at `http://localhost:4200`
 
 Enter a Japanese word in the search box and click the "Search" button or press Enter. The app will display the matching results with their readings, meanings, tags, and other information. Use the pagination controls to navigate through the results.
 

@@ -10,10 +10,6 @@
   <div *ngIf="isLoading" class="loading-message">Searching...</div>
   <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
 
-  <div class="bg-select">
-    <label for="bg-input">Select background image:</label>
-    <input type="file" id="bg-input" (change)="onBgImageSelected($event)">
-  </div>
   <div *ngIf="searchResults.length > 0" class="results-container">
     <div *ngFor="let result of pagedResults; let i = index"
        class="result-item"
@@ -72,6 +68,10 @@
     </div>
   </div>
 
+  <div class="bg-select">
+    <label for="bg-input">Select background image:</label>
+    <input type="file" id="bg-input" (change)="onBgImageSelected($event)">
+  </div>
 </div>
 
 <app-tag-explanation

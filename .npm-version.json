@@ -1,0 +1,10 @@
+{
+  "packages": [
+    {
+      "path": "./front/package.json"
+    },
+    {
+      "path": "./back/package.json"
+    }
+  ]
+}
