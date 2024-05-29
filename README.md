@@ -35,8 +35,9 @@ The frontend also includes features such as:
 2. Install dependencies: `npm install`
 3. Start the app: 
    - Option 1: `npm start` (starts both backend and frontend)
-   - Option 2: Run the `start.sh` script (starts app and opens browser)
+   - Option 2: Run the `start.bat` script (starts app and opens browser)
 4. The app will be available at `http://localhost:4200`
+5. Close the app: Run the `stop.bat` script
 
 Enter a Japanese word in the search box and click the "Search" button or press Enter. The app will display the matching results with their readings, meanings, tags, and other information. Use the pagination controls to navigate through the results.
 
