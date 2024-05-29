@@ -2,7 +2,6 @@
   "name": "jp-dict",
   "version": "1.0.3",
   "scripts": {
-    "version": "npm-version",
     "start": "concurrently \"npm run start:server\" \"npm run start:client\"",
     "start:server": "cd back && npm start",
     "start:client": "cd front && npm start"
