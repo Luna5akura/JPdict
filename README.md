@@ -53,4 +53,10 @@ The word data is stored in JSON files in the `back/src/data` directory. The `ind
 
 ## License
 
+### JMdict and JMnedict
+
+The original XML files - JMdict.xml, JMdict_e.xml, and JMnedict.xml - are the property of the Electronic Dictionary Research and Development Group, and are used in conformance with the Group's license. Project started in 1991 by Jim Breen.
+
+All derived files are distributed under the same [license](https://www.edrdg.org/edrdg/licence.html), as the original license requires it.
+
 This project is open-source and available under the [MIT License](LICENSE).
