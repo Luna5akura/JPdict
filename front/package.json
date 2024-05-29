@@ -1,6 +1,6 @@
 {
-  "name": "word-search-app",
-  "version": "0.0.0",
+  "name": "jp-dict-front",
+  "version": "1.0.6",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

@@ -1,5 +1,7 @@
 // back/src/app.ts
 
+process.env.TS_NODE_CACHE = "true";
+
 import express from 'express';
 import dictionaryRoutes from './routes/dictionary';
 import cors from 'cors';
