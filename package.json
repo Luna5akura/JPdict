@@ -8,8 +8,8 @@
   ],
   "scripts": {
     "start": "concurrently \"npm run start:server\" \"npm run start:client\"",
-    "start:server": "cd back && npm start",
-    "start:client": "cd front && npm start"
+    "start:server": "cd back && npm start --cache",
+    "start:client": "cd front && npm start --cache"
   },
   "devDependencies": {
     "concurrently": "^7.6.0",
