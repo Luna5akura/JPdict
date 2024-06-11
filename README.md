@@ -2,6 +2,8 @@
 
 This is a Japanese word search application that allows users to search for Japanese words and view their meanings, readings, tags, frequency, and other information. Both English and Japanese is avaliable. The app consists of a backend API built with Express.js and TypeScript, and a frontend user interface built with Angular.
 
+![assets/example.gif](assets/example.gif)
+
 ## Backend
 
 The backend is an Express.js server that provides an API endpoint for searching Japanese words. The word data is loaded from JSON files containing term banks. The main components of the backend are:

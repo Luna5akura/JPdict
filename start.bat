@@ -1,8 +1,12 @@
-REM ./start.bat
-
 @echo off
 
-start npm run start
+cd back
+start cmd /c "npm start --cache"
+cd ..
+
+cd front
+start cmd /c "npm start --cache"
+cd ..
 
 :waitloop
 timeout /t 1 >nul
